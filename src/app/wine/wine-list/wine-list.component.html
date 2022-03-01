@@ -1,0 +1,19 @@
+<div>
+    <h1>WineListComponent</h1>
+    <div class="row">
+        <div class="col">
+            <wc-search-form (search)="onSearch($event)"></wc-search-form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <wc-table [wines]="wineList" (wineDeleted)="onWineDeleted($event)" (sortCriteriaChanged)="onSortCriteriaChanged($event)"></wc-table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <wc-pagination [pageCount]="pageCount" (onPageSelected)="changePage($event)"></wc-pagination>
+        </div>
+    </div>
+</div>
+
